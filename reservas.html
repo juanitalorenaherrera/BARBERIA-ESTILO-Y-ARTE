@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reservas - Estilo & Arte</title>
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+  <header>
+    <h1>Reservá tu turno</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="servicios.html">Servicios</a>
+      <a href="galeria.html">Galería</a>
+      <a href="reservas.html">Reservas</a>
+      <a href="blog.html">Blog</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+<section id="reservas" style="padding: 2rem; background-color: #fef6f9; text-align: center;">
+  <h2>📅 Reservá tu turno</h2>
+  <p>Elegí el servicio, la fecha y la hora que más te convenga. ¡Nosotras nos encargamos del resto!</p>
+
+  <form action="#" method="POST" style="max-width: 500px; margin: auto; padding: 1rem; background: #fff; border-radius: 10px; box-shadow: 0 0 10px #e91e63;">
+    
+    <label for="nombre">👤 Nombre completo</label><br>
+    <input type="text" id="nombre" name="nombre" required><br><br>
+
+    <label for="telefono">📞 Teléfono</label><br>
+    <input type="tel" id="telefono" name="telefono" required><br><br>
+
+    <label for="email">✉️ Correo electrónico</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="servicio">💇 Servicio</label><br>
+    <select id="servicio" name="servicio" required>
+      <option value="">Seleccioná uno</option>
+      <option value="corte">Corte de cabello</option>
+      <option value="color">Coloración</option>
+      <option value="alisado">Alisado</option>
+      <option value="peinado">Peinado para eventos</option>
+      <option value="tratamiento">Tratamiento capilar</option>
+    </select><br><br>
+
+    <label for="fecha">📆 Fecha</label><br>
+    <input type="date" id="fecha" name="fecha" required><br><br>
+
+    <label for="hora">⏰ Hora</label><br>
+    <input type="time" id="hora" name="hora" required><br><br>
+
+    <button type="submit" style="padding: 0.6rem 1.2rem; background-color: #e91e63; color: white; border: none; border-radius: 5px; cursor: pointer;">
+      Reservar ahora
+    </button>
+
+  </form>
+</section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Estilo & Arte</p>
+  </footer>
+</body>
+</html>

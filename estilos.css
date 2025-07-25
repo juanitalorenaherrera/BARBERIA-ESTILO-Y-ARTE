@@ -1,0 +1,181 @@
+/* estilos.css */
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #ccc;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* Header y nav */
+header {
+  background-color: #ccc;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 2rem;
+  color: #333;
+}
+
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #ccc;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #ccc;
+  text-decoration: underline;
+}
+
+/* Galería */
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.galeria img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.galeria img:hover {
+  transform: scale(1.05);
+}
+
+/* Formulario reservas */
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: auto;
+  gap: 10px;
+}
+
+input, select, button, textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background-color: #ccc;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #ccc;
+}
+
+/* Blog */
+article {
+  margin-bottom: 30px;
+  padding: 15px;
+  background-color: #ccc;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+article h2 {
+  color: #ccc;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+  font-size: 0.9em;
+  color: #777;
+}
+#newsletter {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease;
+}
+#newsletter.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.blog-post {
+  background: #fff0f5;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  font-family: 'Arial', sans-serif;
+}
+
+.blog-post h2 {
+  color: #ccc;
+  margin-bottom: 1rem;
+}
+
+.blog-post ul {
+  list-style: 💇;
+  padding-left: 1.2rem;
+}
+
+.blog-post img {
+  width: 45%;
+  margin: 1rem;
+  border-radius: 10px;
+}
+
+.transformaciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+#reservas form input,
+#reservas form select {
+  width: 90%;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 1rem;
+}
+
+#reservas h2 {
+  color: #ccc;
+}
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  padding: 2rem;
+  background-color: #fff0f5;
+}
+
+.galeria-img {
+  width: 300px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.galeria-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(233, 30, 99, 0.5);
+}

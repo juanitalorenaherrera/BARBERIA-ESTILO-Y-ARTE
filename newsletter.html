@@ -1,0 +1,29 @@
+<section id="newsletter" style="background-color: #fdf0f5; padding: 2rem; text-align: center;">
+  <h2>Suscribite a nuestras promociones 💌</h2>
+  <p>Recibí descuentos exclusivos, tips de belleza y novedades directamente en tu correo.</p>
+
+  <form action="#" method="POST" style="margin-top: 1rem;">
+    <input type="email" name="email" placeholder="Tu correo electrónico" required
+      style="padding: 0.5rem; width: 250px; border-radius: 5px; border: 1px solid #ccc;">
+    
+    <button type="submit"
+      style="padding: 0.5rem 1rem; background-color: #e91e63; color: white; border: none; border-radius: 5px; cursor: pointer;">
+      Suscribirme
+    </button>
+  </form>
+</section>
+<small style="display:block; margin-top: 1rem; font-size: 0.8rem; color: #da1e1e;">
+  Al suscribirte aceptás recibir correos de promociones. Podés darte de baja en cualquier momento.
+</small>
+</script>
+<script>
+  document.querySelector('form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const email = this.email.value;
+    if (email) {
+      alert(`¡Gracias por suscribirte, ${email}!`);
+      this.reset();
+    } else {
+      alert('Por favor, ingresa un correo electrónico válido.');
+    }
+  });

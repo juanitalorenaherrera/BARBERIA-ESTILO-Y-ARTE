@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>¡Gracias!</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="contenido-centrado">
+    <h1>✅ ¡Gracias por tu mensaje!</h1>
+    <p>Te contactaremos lo antes posible. Mientras tanto, disfruta de tu estilo 😉</p>
+    <a href="index.html">Volver al inicio</a>
+  </main>
+</body>
+</html>
+<form id="form-contacto">
+<script>
+  const form = document.getElementById("form-contacto");
+
+  form.addEventListener("submit", async function (event) {
+    event.preventDefault(); // Evita que recargue la página
+
+    const datos = {
+      nombre: document.getElementById("nombreApellido").value,
+      correo: document.getElementById("correoElectronico").value,
+      telefono: document.getElementById("telefono").value,
+      mensaje: document.getElementById("mensaje").value,
+      metodoContacto: document.querySelector("input[name='contacto']:checked")?.value,
+      horario: document.querySelector("select").value,
+      novedades: document.querySelector("input[type='checkbox']").checked
+    };
+
+    try {
+      const response = await fetch("http://localhost:3000/contacto", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(datos)
+      });
+
+      if (response.ok) {
+        alert("✅ ¡Gracias por tu mensaje! Te responderemos pronto.");
+        form.reset(); // Limpia el formulario
+      } else {
+        alert("❌ Hubo un error al enviar el mensaje.");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      alert("⚠️ No se pudo enviar. Verifica tu conexión o inténtalo más tarde.");
+    }
+  });
+</script>
