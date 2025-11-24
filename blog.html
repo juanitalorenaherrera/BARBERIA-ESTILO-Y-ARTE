@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog - Estilo & Arte</title>
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+  <header>
+    <h1>Blog de Belleza</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="servicios.html">Servicios</a>
+      <a href="galeria.html">Galería</a>
+      <a href="reservas.html">Reservas</a>
+      <a href="blog.html">Blog</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </header>
+<input type="text" placeholder="Buscar en el blog..." id="buscador">
+
+  <main>
+ <article class="blog-post">
+  <h2>💇‍♀️ 5 cortes de cabello que serán tendencia en 2025</h2>
+  <p>¡El 2025 viene con todo! Las tendencias apuestan a looks naturales, cómodos y con personalidad. Si estás pensando en un cambio, estos estilos van a estar en boca de todos:</p>
+  <ul>
+    <li><strong>1. Bob recto clásico:</strong> Elegante, fácil de mantener y súper favorecedor.</li>
+    <li><strong>2. Shag con flequillo:</strong> Perfecto para quienes quieren volumen y onda rebelde.</li>
+    <li><strong>3. Corte pixie con textura:</strong> Corto, práctico y moderno. Ideal para rostros definidos.</li>
+    <li><strong>4. Capas largas naturales:</strong> Dan movimiento y funcionan con cualquier tipo de cabello.</li>
+    <li><strong>5. Melena francesa:</strong> Un estilo chic y despeinado que grita París sin decir nada.</li>
+  </ul>
+  <p>¿Cuál te animás a probar? ✨ ¡Pasá por nuestro salón y encontrá el look que te haga brillar!</p>
+</article>
+
+<article class="blog-post">
+  <h2>🎨 Cuidá tu cabello teñido y hacé que el color dure más</h2>
+  <p>Te teñiste y saliste del salón sintiéndote diosa, pero... ¿cómo hacés para mantener ese color radiante?</p>
+  <h3>✨ Tips esenciales:</h3>
+  <ul>
+    <li>🧴 Usá shampoo sin sulfatos.</li>
+    <li>🚿 Lavalo con agua tibia o fría, nunca caliente.</li>
+    <li>🧖 Aplicá mascarillas nutritivas 1 vez por semana.</li>
+    <li>🌞 Protegé tu pelo del sol con productos con filtro UV.</li>
+    <li>🛍️ Evitá planchitas o secadores sin protector térmico.</li>
+  </ul>
+  <p>Y recordá: ¡los retoques regulares son tus mejores aliados! Consultá en el salón cada cuánto volver según tu tono.</p>
+</article>
+
+<article class="blog-post">
+  <h2>👑 Transformaciones reales: clientas que se animaron al cambio</h2>
+  <p>El cambio empieza por animarse. Estas clientas confiaron en nosotras, y el resultado fue pura magia. ✨</p>
+
+  <p>Desde un corte radical hasta un cambio de color, cada transformación es una historia de valentía y autodescubrimiento.</p>
+  <blockquote>“Nunca pensé que un simple corte de pelo podría cambiar tanto mi vida. Me siento más segura y feliz.”</blockquote>
+  <p>¿Querés ser la próxima historia de cambio? 💫 Pedí tu turno y renovate con nosotras.</p>
+</article>
+
+<article class="blog-post">
+  <h2>💖 Un nuevo look, una nueva vos</h2>
+  <p>A veces no es solo un corte. Es soltar. Es comenzar de nuevo. Es mirarte al espejo y decir: “¡Esa soy yo!”</p>
+
+  <p>Muchas clientas llegan buscando algo más que un cambio de imagen: buscan una señal, un empujón, una transformación desde adentro.</p>
+
+  <blockquote>“El cabello es una extensión de tu historia. Cuando lo renovás, renace tu energía.”</blockquote>
+
+  <p>En nuestro salón te ayudamos a conectar con vos misma a través de tu estilo. Porque verse bien no es superficial: es autoestima, es amor propio, es fuerza.</p>
+</article>
+
+  <footer>
+    <p>&copy; 2025 Estilo & Arte</p>
+  </footer>
+</body>
+</html>
+
+<script>
+  // Función para filtrar las entradas del blog
+  document.getElementById('buscador').addEventListener('input', function() {
+    const query = this.value.toLowerCase();
+    const posts = document.querySelectorAll('.blog-post');
+
+    posts.forEach(post => {
+      const title = post.querySelector('h2').textContent.toLowerCase();
+      const content = post.textContent.toLowerCase();
+
+      if (title.includes(query) || content.includes(query)) {
+        post.style.display = 'block';
+      } else {
+        post.style.display = 'none';
+      }
+    });
+  });

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Estilo & Arte</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
+</head>
+<script>
+    const toggle = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    if (localStorage.getItem('dark-mode') === 'true') {
+        body.classList.add('dark-mode');
+        toggle.checked = true;
+    }
+
+    toggle.addEventListener('change', () => {
+        body.classList.toggle('dark-mode');
+        localStorage.setItem('dark-mode', body.classList.contains('dark-mode'));
+    });
+</script>
+
+<body>
+
+    <header>
+
+        <div class="caja">
+            <h1>
+                 <img src="imagenes/LOGO BARBER SHOP.avif" alt="Logo de la barberia">
+            </h1>
+              
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="servicios.html"> servicios</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <img class="banner" src="imagenes/banner.jpeg" alt="">
+
+    <main>
+        
+            <h2 class="contenido-centrado">Sobre Estilo & Arte </h2>
+
+            <img class="utensilios" src="imagenes/utensilios[1].jpg" alt="utensilion de un barbero">
+<section class="contenido-centrado">
+  <p><strong>Estilo & Arte</strong> no es solo una peluquería, es un espacio donde la belleza se encuentra con la personalidad. 
+     Ubicados en el corazón de la ciudad, desde 2020 transformamos cada visita en una experiencia única de cuidado y estilo.</p>
+
+  <p id="mision"><em>Nuestra misión es: <strong>"Resaltar lo mejor de vos, con pasión, precisión y mucha onda".</strong></em></p>
+
+  <p>Contamos con un equipo de profesionales que aman lo que hacen y que están siempre actualizándose para ofrecerte lo último en cortes, color y tendencias.
+     Porque entendemos que no se trata solo de verte bien, sino de sentirte increíble cada vez que salís por nuestra puerta.</p>
+</section>
+
+        <section class="mapa">
+            <h3 class="titulo-principal">Nuestra Ubicacion</h3>
+            <p>Nuestra ubicacion se <encuentra class=""></encuentra></p>
+            <div class="mapa-contenido">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.958018707527!2d-74.0860636752887!3d4.601541795373121!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f990eafba39c9%3A0x3b67041506f19f2e!2zRWwgQnJvbngsIExvcyBNw6FydGlyZXMsIEJvZ290w6E!5e0!3m2!1ses!2sco!4v1709341998350!5m2!1ses!2sco" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            
+
+        </section>
+        
+
+        <section class="diferenciales">
+            <h3 class="titulo-principal">Diferenciales</h3>
+            <div class="contenido-diferenciales">
+                <ul class="lista-diferenciales">
+                    <li class="items">Atencion personalizada a los clientes</li>
+                    <li class="items">Espacio direfenciado</li>
+                    <li class="items">Localizacion</li>
+                    <li class="items">Prefesionales calificados</li>
+                    <li class="items">Puntualidad</li>
+                    <li class="items">Limpieza</li>
+                </ul><img src="diferenciales/diferenciales.jpg" class="imagenDiferenciales"> 
+            </div>       
+    </main>
+
+
+    <footer>
+        <img src="imagenes/logo..jpeg" alt="Logo de la barberia">
+        <p class="copyright">&copy Copyright Estilo & Arte - 2023</p>
+    </footer>
+    
+
+</body>
+</html>
+
+
+
+ 
+
+

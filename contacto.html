@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contacto.css">
+
+</head>
+<body>
+    <header>
+
+        <div class="caja">
+            <h1>
+                 <img src="imagenes/LOGO BARBER SHOP.avif" alt="Logo de Estilo & Arte">
+            </h1>
+              
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+  <form action="mailto:tuemail@dominio.com" method="post" enctype="text/plain">
+    <label for="nombreApellido">Nombre y apellido</label>
+    <input type="text" id="nombreApellido" name="nombreApellido" class="input-padron" required>
+
+    <label for="correoElectronico">Correo Electrónico</label>
+    <input type="email" id="correoElectronico" name="correoElectronico" class="input-padron" required placeholder="email@dominio.com">
+
+    <label for="telefono">Teléfono</label>
+    <input type="tel" id="telefono" name="telefono" class="input-padron" pattern="[+0-9\s]+" required placeholder="(+57) XXXXXXXX">
+
+    <label for="motivo">Motivo de contacto</label>
+    <select id="motivo" name="motivo" required>
+        <option value="">--Selecciona--</option>
+        <option value="venta">Venta</option>
+        <option value="soporte">Soporte</option>
+        <option value="sugerencias">Sugerencias</option>
+        <option value="otros">Otros</option>
+    </select>
+
+    <label for="mensaje">Mensaje</label>
+    <textarea id="mensaje" name="mensaje" class="input-padron" rows="6" required></textarea>
+
+    <fieldset>
+        <legend>¿Cómo le gustaría que le contacte?</legend>
+        <label><input type="radio" name="contacto" value="email" required>Email</label>
+        <label><input type="radio" name="contacto" value="telefono">Teléfono</label>
+        <label><input type="radio" name="contacto" value="whatsapp" checked>WhatsApp</label>
+    </fieldset>
+
+    <fieldset>
+        <legend>¿En qué horario quiere ser atendido?</legend>
+        <select name="horario" required>
+            <option value="">--Selecciona--</option>
+            <option value="mañana">Mañana</option>
+            <option value="tarde">Tarde</option>
+            <option value="noche">Noche</option>
+        </select>
+    </fieldset>
+
+    <button type="submit">Enviar mensaje</button>
+    <button type="reset">Borrar formulario</button>
+</form>
+
+    <footer>
+        <img src="imagenes/logo..jpeg" alt="logo de Estilo & Arte ">
+        <p class="copyright">&copy Copyright Estilo & Arte  - 2023</p>
+    </footer>
+
+</body>
+</html>
